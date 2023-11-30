@@ -1,8 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet');
 
 
-
-body{
+.parallax {
+    /* The image used */
+    background-image:url(Compromiso.jpeg);
+        /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .parallax2 {
+    /* The image used */
+    background-image:url(CAPILLA.jpeg);
+        /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax3 {
+    /* The image used */
+    background-image:url(MESA.jpg);
+        /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body{
     background-color: rgb(247, 247, 188);
 }
 
@@ -62,7 +98,7 @@ a{
 #box h1 {
     font-family: "dancing script";
     font-size: 5em;
-    color: white;
+    color: #1c1e26;
     margin: 0 auto;
     grid-column: 1/1;
     grid-row: 2/3;
