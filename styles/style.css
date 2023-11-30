@@ -106,7 +106,7 @@ a{
 }
 
 #hero_msg{
-    width: 1300px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     margin-top: 70px;
@@ -118,7 +118,7 @@ a{
 
 
 .Home-grid img{
-    width: 500px;
+    width: 350px;
     height: 350px;
     border: 10px solid #9d815b;
     border-radius: 500px;
