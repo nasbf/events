@@ -39,7 +39,7 @@
     background-size: cover;
   }
   body{
-    background-color: rgb(247, 247, 188);
+    background-color: #bdac9c;
 }
 
 header{
@@ -110,8 +110,7 @@ a{
     margin: 0 auto;
     text-align: center;
     margin-top: 70px;
-    font-size: 1.4em;
-   
+    font-size: 1.4em;   
     font-family: "montserrat alternates";
     font-weight: 600;
     color: #1c1e26;
@@ -121,7 +120,7 @@ a{
 .Home-grid img{
     width: 500px;
     height: 350px;
-    border: 10px solid #bdac9c;
+    border: 10px solid #9d815b;
     border-radius: 500px;
     }
 
