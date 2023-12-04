@@ -272,7 +272,7 @@ footer .copy{
     grid-row: 3/4;
   }
   .nogal{
-    margin-top: -40px;
+    margin-top: -20px;
     grid-column: 2/3;
     grid-row: 3/4;
     text-align: center;
