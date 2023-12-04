@@ -133,7 +133,7 @@ h1 {
     text-align: center;
     font-family: "Courgette";
     font-weight: lighter;
-    font-size: 3em;
+    font-size: 3.5em;
     grid-column: 2/3;
     grid-row: 1/2;
 
@@ -210,9 +210,8 @@ footer .copy{
 .text-block {
     position: absolute;
     left: 15px;
-    top: 600px;
+    top: 700px;
     right: 350px;
-    bottom: 15px;
     background-color: rgba(0, 0, 0, 0.459);
     color: white;
     padding-left: 20px;
@@ -240,7 +239,7 @@ footer .copy{
     grid-column: 2/3;
     grid-row: 1/2;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
   }
   .remanso img{
     grid-column: 2/3;
@@ -266,7 +265,7 @@ footer .copy{
     grid-column: 1/2;
     grid-row: 2/3;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
     
   }
 
@@ -279,7 +278,7 @@ footer .copy{
     grid-column: 2/3;
     grid-row: 3/4;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
   }
   
 .card-image{
