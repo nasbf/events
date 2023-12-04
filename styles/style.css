@@ -132,6 +132,8 @@ a{
 h1 {
     text-align: center;
     font-family: "Courgette";
+    font-weight: lighter;
+    font-size: 3.5em;
     grid-column: 2/3;
     grid-row: 1/2;
 
@@ -259,11 +261,12 @@ footer .copy{
     
   }
   .reman{
-    margin-top: 10px;
+    margin-top: -10px;
     grid-column: 1/2;
     grid-row: 2/3;
     text-align: center;
     padding: 50px;
+    
   }
 
   .nogales{
@@ -279,7 +282,7 @@ footer .copy{
   }
   
 .card-image{
-    margin-top: 20px;
+    
     width: 90%;
     box-shadow: 2px 2px 2px 4px rgba(255, 255, 255, 0.842);
     animation-name: initial;
