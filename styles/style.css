@@ -16,7 +16,7 @@
   }
   .parallax2 {
     /* The image used */
-    background-image:url(CAPILLA.jpeg);
+    background-image:url(CAPILLA.jpeg) ;
         /* Set a specific height */
     min-height: 500px; 
   
@@ -121,7 +121,7 @@ a{
     width: 400px;
     height: 350px;
     border: 10px solid #9d815b;
-    border-radius: 350px;
+    border-radius: 150px;
     }
 
 .Home-grid{
@@ -162,15 +162,11 @@ h1 {
     border-radius: 20px;
     
 }
-
 footer{
     display: grid;
     grid-template-columns: 50px 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: white;
-
-    
-
 }
 footer .logo{
     grid-column: 2/3;
@@ -179,8 +175,6 @@ footer .logo{
 footer .data{
     grid-column: 3/4;
     margin-top: 20px;
-    
-    
 }
 .data{
     color: #1c1e26;
@@ -206,3 +200,88 @@ footer .copy{
     font-family: "montserrat alternates";
 
 }
+
+
+.container{
+    position: relative;
+}
+.text-block {
+    position: absolute;
+    left: 15px;
+    top: 850px;
+    right: 900px;
+    background-color: rgba(0, 0, 0, 0.459);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .text-block p{
+    text-align: center;    
+    font-size: 1.4em;   
+    font-family: "montserrat alternates";
+    font-weight: lighter;
+  }
+
+  .states-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .amevea img{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .amev{
+    margin-top: 40px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+    padding: 50px;
+  }
+  .remanso img{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .states-grid p {
+    font-family: "Courgette";
+    color: #1c1e26;
+    font-size: 1.6em;
+    
+  }
+
+  .states-grid h2 {
+    font-family: "dancing script";
+    color: #1c1e26;
+    font-size: 2.2em;
+    
+  }
+  .reman{
+    margin-top: 50px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .nogales{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .nogal{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: center;
+    padding: 50px;
+  }
+  
+.card-image{
+    width: 90%;
+    box-shadow: 2px 2px 2px 4px white;
+    animation-name: initial;
+    animation-duration: 10s;
+    animation-direction: normal;
+}
+
