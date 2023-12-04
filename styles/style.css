@@ -209,7 +209,7 @@ footer .copy{
     position: absolute;
     left: 15px;
     top: 850px;
-    right: 300px;
+    right: 350px;
     background-color: rgba(0, 0, 0, 0.459);
     color: white;
     padding-left: 20px;
@@ -234,7 +234,7 @@ footer .copy{
     grid-row: 1/2;
   }
   .amev{
-    margin-top: 40px;
+    margin-top: 20px;
     grid-column: 2/3;
     grid-row: 1/2;
     text-align: center;
@@ -259,7 +259,7 @@ footer .copy{
     
   }
   .reman{
-    margin-top: 50px;
+    margin-top: 30px;
     grid-column: 1/2;
     grid-row: 2/3;
     text-align: center;
