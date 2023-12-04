@@ -234,7 +234,7 @@ footer .copy{
     grid-row: 1/2;
   }
   .amev{
-    margin-top: 20px;
+    
     grid-column: 2/3;
     grid-row: 1/2;
     text-align: center;
@@ -254,12 +254,12 @@ footer .copy{
 
   .states-grid h2 {
     font-family: "dancing script";
-    color: white;
+    color: #1c1e26;
     font-size: 2.2em;
     
   }
   .reman{
-    margin-top: 30px;
+    margin-top: 20px;
     grid-column: 1/2;
     grid-row: 2/3;
     text-align: center;
