@@ -319,6 +319,7 @@ h2{
     height: 480px;
     margin-left: 80px;
     border-radius: 25px;
+    width: 90%;
 }
 
 .rustica img{
@@ -326,6 +327,7 @@ h2{
     grid-row: 2/3;
     margin-right: 25px;
     border-radius: 25px;
+    width: 90%;
 }
 
 .text1{
