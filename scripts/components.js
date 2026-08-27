@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarTopbar();
     cargarCotizacion();
     cargarFooter();
+    cargarWhatsapp();
 
 });
 
@@ -250,6 +251,42 @@ function cargarFooter() {
         .catch(error => {
 
             console.error("Error cargando footer:", error);
+
+        });
+
+}
+
+/* =========================================
+   WHATSAPP
+   ========================================= */
+
+function cargarWhatsapp() {
+
+    const container =
+        document.getElementById("whatsapp-container");
+
+    if (!container) {
+        return;
+    }
+
+    fetch("components/whatsapp.html")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("No se pudo cargar WhatsApp.");
+            }
+
+            return response.text();
+
+        })
+        .then(html => {
+
+            container.innerHTML = html;
+
+        })
+        .catch(error => {
+
+            console.error("Error cargando WhatsApp:", error);
 
         });
 

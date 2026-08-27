@@ -1301,3 +1301,81 @@ font-size:13.5px;
     }
 
 }
+
+/* =========================================
+   BOTÓN FLOTANTE WHATSAPP
+   ========================================= */
+
+.whatsapp-flotante {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 35px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #25D366;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.22);
+
+    z-index: 9999;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Icono */
+
+.whatsapp-flotante svg {
+
+    width: 30px;
+    height: 30px;
+
+    fill: white;
+}
+
+
+/* Hover */
+
+.whatsapp-flotante:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================
+   WHATSAPP - CELULAR
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .whatsapp-flotante {
+
+        width: 52px;
+        height: 52px;
+
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .whatsapp-flotante svg {
+
+        width: 27px;
+        height: 27px;
+    }
+
+}
