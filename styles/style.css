@@ -1,206 +1,521 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Montserrat+Alternates:wght@300&display=swap');
 
+ :root{
+    --tinta:   #261c05;   /* negro cálido */
+    --oro:     #A9812F;   /* ocre / oro del sello */
+    --oro-suave:#77602d;
+    --papel:   #fff5e0ba;   /* fondo cálido tipo papel */
+    --linea:   #DAD1BE;
+    --gris:    #6B6355;   /* texto secundario */
+    --alerta:  #9A3B2E;
+    --paragraph: #261c05;
+  }
+
+  *{ box-sizing:border-box; }
+
+  /* Este bloque de fondo es solo para la previsualización.
+     Al integrarlo en el sitio, quédate con .cotiza-wrap hacia adentro. */
+  body {
+    margin: 0;
+    background: var(--papel);
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--tinta);
+    -webkit-font-smoothing: antialiased;
+}
+/* =========================================
+   PARALLAX
+   ========================================= */
+
+.parallax,
+.parallax2,
+.parallax3 {
+    min-height: 680px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .parallax {
-    /* The image used */
-    background-image:url(Compromiso.jpeg);
-        /* Set a specific height */
-    min-height: 500px; 
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-  }
-  .parallax2 {
-    /* The image used */
-    background-image:url(CAPILLA.jpeg) ;
-        /* Set a specific height */
-    min-height: 500px; 
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .parallax3 {
-    /* The image used */
-    background-image:url(MESA.jpg);
-        /* Set a specific height */
-    min-height: 500px; 
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  body{
-    background-color: #bdac9c;
+    background-image: url(Compromiso.jpeg);
 }
 
-header{
-    display: grid;
-    grid-template-columns: 1fr 210px 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    background-color: white;
-    
-    
-}
-header :hover{
-    background-color: #bdac9c;
-    color: #dddad6;
-    font-weight: lighter;
+.parallax2 {
+    background-image: url(CAPILLA.jpeg);
 }
 
-.logo{
-    width: 200px;
-    grid-column: 2;
-    grid-row: 1/4;
-    margin: 0 auto;
-}
-nav{
-    grid-column: 3/4;
-    grid-row: 3/4;
-    text-align: center;
-    
-    
+.parallax3 {
+    background-image: url(MESA.jpg);
 }
 
-a{
-    grid-column: 3;
-    margin-inline-end: 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    font-family: "Courgette";
-    color: #3d2504;
-    
 
-}
-#box{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20% 50px 1fr;
-    
-}
+/* =========================================
+   PARALLAX EN CELULAR
+   ========================================= */
 
-#first-img {
+@media (max-width: 700px) {
+
+    .parallax,
+    .parallax2,
+    .parallax3 {
+        min-height: 350px;
+
+        /*
+         * Algunos celulares no soportan bien
+         * background-attachment: fixed.
+         */
+        background-attachment: scroll;
+    }
+}
+/* =========================================
+   TOPBAR
+   ========================================= */
+
+.topbar {
     width: 100%;
-    height: 598px;
-    grid-column: 1/1;
-    grid-row: 1/4;
+    min-height: 44px;
+
+    padding: 8px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        90deg,
+        #77602d 0%,
+        #c9a34e 25%,
+        #f0d27a 40%,
+        #c9a34e 75%,
+        #77602d 100%
+    );
+
+    color: var(--paragraph);
+
+    font-family: "courgette", system-ui, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Frase de confianza */
+
+.topbar-confianza {
+    flex: 1;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    align-self: center;
+}
+
+
+/* Contacto + redes */
+
+.topbar-contacto {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    white-space: nowrap;
+}
+
+
+/* Enlaces */
+
+.topbar a {
+    display: flex;
+    align-items: center;
+
+    color: white;
+    text-decoration: none;
+
+    margin: 0;
+
+    font-family: "inter", system-ui, sans-serif;
+    font-size: 1rem;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+/* Iconos */
+.topbar-contacto svg {
+    width: 21px;
+    height: 21px;
+
+    fill: white;
+    stroke: var(--oro-suave);
+    stroke-width: 1.5;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.topbar a:hover svg {
+    transform: scale(1.15);
+    opacity: 0.85;
+}
+
+/* Efecto al pasar el mouse */
+
+.topbar a:hover {
+    opacity: 0.85;
+}
+
+.topbar a:hover img {
+    transform: scale(1.15);
+}
+
+
+/* Separador */
+
+.topbar-separador {
+    color: white;
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   TOPBAR - CELULAR
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .topbar {
+        flex-direction: column;
+
+        justify-content: center;
+        text-align: center;
+
+        gap: 7px;
+
+        padding: 10px 15px;
+    }
+
+    .topbar-confianza {
+        line-height: 1.4;
+        font-size: 0.78rem;
+    }
+
+    .topbar-contacto {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 12px;
+    }
+
+    .topbar-contacto svg {
+        width: 19px;
+        height: 19px;
+    }
+
+}
+
+/* =========================================
+   HEADER + MENÚ
+   ========================================= */
+
+.site-header {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: var(--papel);
+    border-bottom: 1px solid var(--linea);
+}
+
+/* Logo */
+.site-logo {
+    display: block;
+    margin-left:200px;
+    padding: 0;
+}
+
+.site-logo img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+/* Menú */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+}
+
+.main-nav a {
+    margin: 0;
+    padding: 8px 0;
+    text-decoration: none;
+    font-family: "Courgette", cursive;
+    font-size: 1.4em;
+    color: var(--paragraph);
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+/* Hover */
+.main-nav a:hover {
+    color: var(--oro);
+}
+
+/* =========================================
+   HERO / MENSAJE PRINCIPAL
+   ========================================= */
+
+#first {
+    width: 100%;
+    background-color: var(--papel);
+}
+
+/* Título */
+#box {
+    width: 100%;
+    padding: 55px 20px 25px;
+    text-align: center;
 }
 
 #box h1 {
-    font-family: "dancing script";
-    font-size: 5em;
-    color: #1c1e26;
-    margin: 0 auto;
-    grid-column: 1/1;
-    grid-row: 2/3;
-    z-index: 1;
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(3em, 6vw, 5em);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--oro-suave);
 }
 
-#hero_msg{
-    width: 1000px;
+/* Texto principal */
+#hero_msg {
+    width: min(1000px, 90%);
     margin: 0 auto;
+    padding: 10px 0 65px;
+
     text-align: center;
-    margin-top: 70px;
-    font-size: 1.4em;   
-    font-family: "montserrat alternates";
-    font-weight: 600;
-    color: #1c1e26;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    line-height: 1.7;
+    font-weight: 400;
+
+    color: var(--paragraph);
+}
+
+#hero_msg p {
+    margin: 0 0 25px;
+}
+
+#hero_msg p:last-child {
+    margin-bottom: 0;
 }
 
 
-.Home-grid img{
-    width: 400px;
-    height: 350px;
-    border: 10px solid #9d815b;
-    border-radius: 150px;
+/* =========================================
+   HERO EN CELULAR
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    #box {
+        padding: 40px 20px 20px;
     }
 
-.Home-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 130px 1fr 180px;
+    #box h1 {
+        font-size: 3.2em;
+    }
+
+    #hero_msg {
+        width: 90%;
+        padding-bottom: 45px;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    #hero_msg p {
+        margin-bottom: 22px;
+    }
 }
-h1 {
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    #box {
+        padding-top: 35px;
+    }
+
+    #box h1 {
+        font-size: 2.8em;
+    }
+
+    #hero_msg {
+        width: 92%;
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* =========================================
+   NUESTROS SERVICIOS
+   ========================================= */
+
+.Home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    padding: 60px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Título */
+.Home-grid > h1 {
+    grid-column: 1 / -1;
     text-align: center;
-    font-family: "Courgette";
-    font-weight: lighter;
+    font-family: "Dancing Script", cursive;
+    font-weight: 400;
     font-size: 3.5em;
-    grid-column: 2/3;
-    grid-row: 1/2;
-
+    line-height: 1.2;
+    color: var(--oro-suave);
+    margin: 0 0 10px;
 }
 
-.states{
-    grid-column: 1/2;
-    grid-row: 2/3;
+/* Tarjetas de servicios */
+.states,
+.decoration,
+.Catering {
     text-align: center;
-   
-
-}
-.decoration{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    text-align: center;
-}
-.Catering{
-    grid-column: 3/4;
-    grid-row: 2/3;
-    text-align: center;
+    min-width: 0;
 }
 
-.link:hover {
-    background-color: #fdeb37;
-    padding: 40px;
+/* Imágenes */
+.Home-grid img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto 15px;
+
+    border: 1px solid #9d815b;
+    border-radius: 2px;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.states:hover img,
+.decoration:hover img,
+.Catering:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Nombre del servicio */
+.link {
+    display: block;
+    margin: 0;
+
+    text-decoration: none;
+    color: var(--paragraph);
+
+    font-family: "Dancing Script", cursive;
     font-size: 2em;
-    border-radius: 20px;
-    
-}
-footer{
-    display: grid;
-    grid-template-columns: 50px 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    background-color: white;
-}
-footer .logo{
-    grid-column: 2/3;
-    margin-top: 20px;
-}
-footer .data{
-    grid-column: 3/4;
-    margin-top: 20px;
-}
-.data{
-    color: #1c1e26;
-    font-family: "montserrat alternates";
-    font-style: oblique;
-    font-size: 1.1em;
-    font-weight: bold;
-    
-    
+    line-height: 1.2;
+
+    transition: color 0.2s ease;
 }
 
-footer .Social{
-    grid-column: 4/5;
-    grid-row: 1/3;
-    margin-top: 30px;
+/* Hover del nombre */
+.link:hover {
+    color: var(--oro);
 }
 
-footer .copy{
-    grid-column: 3/4;
-    grid-row: 2/3;
-    margin-top: 20px;
-    color: #1c1e26;
-    font-family: "montserrat alternates";
 
+/* =========================================
+   SERVICIOS - TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .Home-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 50px 25px;
+    }
+
+    .Home-grid > h1 {
+        font-size: 3.2em;
+    }
+
+}
+
+
+/* =========================================
+   SERVICIOS - CELULAR
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .Home-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 45px 20px;
+    }
+
+    .Home-grid > h1 {
+        grid-column: 1;
+        font-size: 3em;
+        margin-bottom: 5px;
+    }
+
+    .states,
+    .decoration,
+    .Catering {
+        grid-column: 1;
+    }
+
+    .Home-grid img {
+        width: 100%;
+        max-width: 400px;
+        height: 280px;
+    }
+
+    .link {
+        font-size: 1.9em;
+    }
+}
+
+
+/* =========================================
+   SERVICIOS - CELULARES PEQUEÑOS
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .Home-grid {
+        padding: 35px 15px;
+        gap: 35px;
+    }
+
+    .Home-grid > h1 {
+        font-size: 2.7em;
+    }
+
+    .Home-grid img {
+        height: 240px;
+    }
+
+    .link {
+        font-size: 1.8em;
+    }
 }
 
 
@@ -369,5 +684,608 @@ h2{
     font-weight: 600;
 
 }
+.cotiza{
+    margin-top: 100px;
+}
+.cotiza-wrap{
+max-width:520px;
+margin:0 auto;
+background:#FBF9F3;
+border:1px solid var(--linea);
+border-radius:2px;               /* casi recto: estética sobria del sello */
+padding:40px 34px 36px;
+}
+
+/* Sello: elemento de marca (plano, dos colores). Firma visual de la sección. */
+.cotiza-sello{
+width:56px; height:56px; margin:0 auto 20px;
+border:2px solid var(--oro);
+border-radius:50%;
+display:flex; align-items:center; justify-content:center;
+color:var(--oro);
+font-family:'Cormorant Garamond',serif;
+font-weight:600; font-size:22px; letter-spacing:1px;
+}
+
+.cotiza-eyebrow{
+text-align:center;
+text-transform:uppercase;
+letter-spacing:2.5px;
+font-size:11px;
+font-weight:600;
+color:var(--oro);
+margin:0 0 8px;
+}
+.cotiza-titulo{
+text-align:center;
+font-family:'Cormorant Garamond',serif;
+font-weight:600;
+font-size:34px;
+line-height:1.1;
+margin:0 0 8px;
+}
+.cotiza h2{
+    color: var(--oro-suave);
+}
+.cotiza-bajada{
+text-align:center;
+color:var(--gris);
+font-size:15px;
+line-height:1.5;
+margin:0 auto 28px;
+max-width:38ch;
+}
+
+.campo{ margin-bottom:16px; }
+.campo label{
+display:block;
+font-size:13px;
+font-weight:600;
+margin-bottom:6px;
+color:var(--tinta);
+}
+.campo label .req{ color:var(--oro); }
+
+/* Campos: grandes y cómodos en móvil (44px+ de alto) */
+.campo input,
+.campo select{
+width:100%;
+height:50px;
+padding:0 14px;
+font-size:16px;                  /* 16px evita que el móvil haga zoom */
+font-family:inherit;
+color:var(--tinta);
+background:#fff;
+border:1px solid var(--linea);
+border-radius:2px;
+appearance:none;
+transition:border-color .15s ease;
+}
+.campo select{
+/* flechita del select en oro */
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23A9812F' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+background-repeat:no-repeat;
+background-position:right 14px center;
+padding-right:38px;
+cursor:pointer;
+}
+.campo input:focus,
+.campo select:focus{
+outline:none;
+border-color:var(--oro);
+box-shadow:0 0 0 2px rgba(169,129,47,.18);  /* foco visible (accesibilidad) */
+}
+
+/* Honeypot anti-spam: invisible para humanos, los bots lo llenan */
+.hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+.cotiza-boton{
+width:100%;
+height:54px;
+margin-top:6px;
+border:none;
+border-radius:2px;
+background:var(--oro);
+color:#fff;
+font-family:inherit;
+font-size:16px;
+font-weight:600;
+letter-spacing:.3px;
+cursor:pointer;
+transition:background .15s ease;
+}
+.cotiza-boton:hover{ background:#3d2504; }
+.cotiza-boton:focus-visible{ outline:3px solid var(--oro-suave); outline-offset:2px; }
+
+.cotiza-nota{
+display:flex; align-items:center; justify-content:center; gap:7px;
+margin-top:14px;
+font-size:12.5px;
+color:var(--gris);
+}
+.cotiza-nota svg{ flex:none; }
+.cotiza-error{
+display:none;
+margin-top:12px;
+padding:10px 14px;
+background:#fbece9;
+border:1px solid #e3bcb4;
+border-radius:2px;
+color:var(--alerta);
+font-size:13.5px;
+}
+
+@media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
 
 
+
+/* =========================================
+   HEADER EN CELULAR
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .site-header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .site-logo img {
+        width: 160px;
+    }
+
+    .main-nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    .main-nav a {
+        font-size: 1em;
+    }
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .site-header {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .site-logo img {
+        width: 140px;
+    }
+
+    .main-nav {
+        gap: 8px 15px;
+    }
+
+    .main-nav a {
+        font-size: 0.95em;
+    }
+}
+/* =========================================
+   FOOTER GOURMET REAL
+   ========================================= */
+
+.site-footer {
+    width: 100%;
+    margin-top: 80px;
+
+    background: linear-gradient(
+        110deg,
+        #f0d27a 0%,
+        #d6b45a 35%,
+        #a9812f 65%,
+        #77602d 100%
+    );
+
+    color: var(--paragraph);
+}
+
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+.footer-contenido {
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 55px 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1.3fr
+        1fr
+        1.2fr;
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   MARCA
+   ========================================= */
+
+.footer-marca img {
+
+    display: block;
+
+    width: 180px;
+    height: auto;
+
+    margin-bottom: 18px;
+}
+
+.footer-marca p {
+
+    max-width: 260px;
+
+    margin: 0;
+
+    font-family: "Montserrat Alternates", sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+
+    color: var(--paragraph);
+}
+
+
+/* =========================================
+   TITULOS
+   ========================================= */
+
+.footer-contacto h3,
+.footer-redes h3,
+.footer-extra h3 {
+
+    margin: 0 0 18px;
+
+    font-family: "Inter", system-ui, sans-serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 500;
+
+    color: var(--paragraph);
+}
+
+
+/* =========================================
+   CONTACTO
+   ========================================= */
+
+.footer-contacto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.footer-contacto a,
+.footer-contacto p {
+
+    margin: 0;
+
+    font-family: "Montserrat Alternates", sans-serif;
+
+    font-size: 0.9rem;
+
+    color: var(--paragraph);
+
+    text-decoration: none;
+}
+
+.footer-contacto a:hover {
+
+    color: var(--papel);
+}
+
+
+/* =========================================
+   REDES
+   ========================================= */
+
+.footer-redes {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.footer-iconos {
+
+    display: flex;
+
+    gap: 14px;
+}
+
+
+/* Botones sociales */
+
+.footer-iconos a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--papel);
+    border-radius: 50%;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* SVG */
+
+.footer-iconos svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    fill: white;
+}
+
+
+/* Hover */
+
+.footer-iconos a:hover {
+
+    background-color: var(--papel);
+
+    transform: translateY(-3px);
+}
+
+.footer-iconos a:hover svg {
+
+    fill: var(--paragraph);
+
+    stroke: var(--paragraph);
+}
+
+
+/* =========================================
+   MENSAJE EXTRA
+   ========================================= */
+
+.footer-extra {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.footer-extra p {
+
+    max-width: 250px;
+
+    margin: 0;
+
+    font-family: "Montserrat Alternates", sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+    color: var(--paragraph);
+}
+
+
+/* =========================================
+   COPYRIGHT
+   ========================================= */
+
+.footer-bottom {
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 18px 60px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+
+    margin: 0;
+
+    font-family: "Montserrat Alternates", sans-serif;
+
+    font-size: 0.75rem;
+
+    color: var(--papel);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .footer-contenido {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+
+        padding: 50px 40px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+
+        margin-top: 60px;
+    }
+
+
+    .footer-contenido {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 30px;
+
+        padding: 40px 25px;
+    }
+
+
+    /* Logo */
+
+    .footer-marca img {
+
+        width: 150px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-bottom: 12px;
+    }
+
+
+    .footer-marca p {
+
+        max-width: 280px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 0.82rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* Títulos */
+
+    .footer-contacto h3,
+    .footer-redes h3,
+    .footer-extra h3 {
+
+        font-size: 1.35rem;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* Contacto */
+
+    .footer-contacto {
+
+        align-items: center;
+
+        gap: 7px;
+    }
+
+
+    .footer-contacto a,
+    .footer-contacto p {
+
+        font-size: 0.82rem;
+    }
+
+
+    /* Redes */
+
+    .footer-redes {
+
+        align-items: center;
+    }
+
+
+    .footer-iconos {
+
+        gap: 12px;
+    }
+
+
+    .footer-iconos a {
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .footer-iconos svg {
+
+        width: 17px;
+        height: 17px;
+    }
+
+
+    /* Mensaje */
+
+    .footer-extra {
+
+        align-items: center;
+    }
+
+
+    .footer-extra p {
+
+        max-width: 280px;
+
+        font-size: 0.82rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* Copyright */
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 5px;
+
+        padding: 15px 20px;
+    }
+
+
+    .footer-bottom p {
+
+        font-size: 0.7rem;
+    }
+
+}

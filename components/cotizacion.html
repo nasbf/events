@@ -1,0 +1,177 @@
+
+<div class="parallax3"></div>
+
+<div class="cotiza">
+
+    <section class="cotiza-wrap">
+
+        <div class="cotiza-sello" aria-hidden="true">GR</div>
+
+        <p class="cotiza-eyebrow">Gourmet Real</p>
+
+        <h2 class="cotiza-titulo">Cotiza tu evento</h2>
+
+        <p class="cotiza-bajada">
+            Cuéntanos lo esencial y un asesor te escribe por WhatsApp dando pronta respuesta.
+        </p>
+
+        <form id="cotizacion" novalidate>
+
+            <div class="campo">
+
+                <label for="nombre">
+                    Nombre <span class="req">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="telefono">
+                    WhatsApp <span class="req">*</span>
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="300 000 0000"
+                    autocomplete="tel"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="evento">
+                    Tipo de evento <span class="req">*</span>
+                </label>
+
+                <select id="evento" name="evento" required>
+
+                    <option value="" disabled selected>
+                        Selecciona una opción
+                    </option>
+
+                    <option value="Boda">
+                        Boda
+                    </option>
+
+                    <option value="15 años">
+                        15 años
+                    </option>
+
+                    <option value="Cumpleaños">
+                        Cumpleaños
+                    </option>
+
+                    <option value="Evento corporativo">
+                        Evento corporativo
+                    </option>
+
+                    <option value="Otro">
+                        Otro
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="fecha">
+                    Fecha tentativa
+                </label>
+
+                <input
+                    type="date"
+                    id="fecha"
+                    name="fecha"
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+    <label for="invitados">
+        Número de invitados <span class="req">*</span>
+    </label>
+
+    <input
+        type="number"
+        id="invitados"
+        name="invitados"
+        placeholder="Ej. 120"
+        min="1"
+        step="1"
+        inputmode="numeric"
+        required
+    >
+
+</div>
+
+
+            <!-- Honeypot anti-spam -->
+            <div class="hp" aria-hidden="true">
+
+                <label for="website">
+                    No llenar
+                </label>
+
+                <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <button type="submit" class="cotiza-boton">
+                Quiero mi cotización
+            </button>
+
+
+            <p class="cotiza-nota">
+
+                <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="#A9812F"
+                    aria-hidden="true"
+                >
+                    <path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
+                </svg>
+
+                Te responderemos por WhatsApp
+
+            </p>
+
+
+            <div
+                class="cotiza-error"
+                id="cotiza-error"
+            ></div>
+
+        </form>
+
+    </section>
+
+</div>
