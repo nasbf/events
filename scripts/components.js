@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     cargarTopbar();
+    cargarHeader();
     cargarCotizacion();
     cargarFooter();
     cargarWhatsapp();
@@ -43,6 +44,44 @@ function cargarTopbar() {
         });
 
 }
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+function cargarHeader() {
+
+    const container =
+        document.getElementById("header-container");
+
+    if (!container) {
+        return;
+    }
+
+    fetch("components/header.html")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("No se pudo cargar el header.");
+            }
+
+            return response.text();
+
+        })
+        .then(html => {
+
+            container.innerHTML = html;
+
+        })
+        .catch(error => {
+
+            console.error("Error cargando header:", error);
+
+        });
+
+}
+
 
 
 /* =========================================
