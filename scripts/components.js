@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarCotizacion();
     cargarFooter();
     cargarWhatsapp();
-
+    
 });
 
 
@@ -329,4 +329,167 @@ function cargarWhatsapp() {
 
         });
 
+}
+
+function cargarConversion(tipo) {
+    console.log("TIPO RECIBIDO:", tipo);
+
+    const conversionContainer = document.getElementById("conversion-container");
+
+    if (!conversionContainer) return;
+
+    const conversiones = {
+
+        bodas: {
+            etiqueta: "TU HISTORIA, TU DÍA, TU BODA",
+            titulo: "Tu boda empieza aquí",
+            frase: "Tú imaginas el día. Nosotros hacemos que suceda.",
+            descripcion:
+                "Cada boda es diferente y merece ser diseñada alrededor de quienes la viven. Nuestro equipo te acompaña para encontrar el lugar ideal, coordinar cada detalle y crear una celebración que refleje tu historia y haga de este día un recuerdo inolvidable.",
+
+            paso1Titulo: "Cuéntanos tu idea",
+            paso1Texto:
+                "Háblanos de la boda que estás imaginando: fecha, invitados, estilo y todo aquello que sueñas para ese día.",
+
+            paso2Titulo: "Diseñamos tu propuesta",
+            paso2Texto:
+                "Te orientamos y buscamos las opciones que mejor se adapten a tu celebración y a lo que deseas vivir.",
+
+            paso3Titulo: "Disfruta tu gran día",
+            paso3Texto:
+                "Nosotros cuidamos la organización y los detalles para que tú puedas dedicarte a disfrutar cada momento.",
+
+            accion: "¿Comenzamos a planear tu día especial?",
+            accionTexto:
+                "Cuéntanos cómo imaginas tu boda y déjanos ayudarte a hacerla realidad."
+        },
+
+        cumpleanos: {
+            etiqueta: "CELEBRA, DISFRUTA, RECUERDA",
+            titulo: "Tu celebración empieza aquí",
+            frase: "Tú imaginas la fiesta. Nosotros hacemos que cada momento sea especial.",
+            descripcion:
+                "Queremos que tu celebración sea tan especial como la persona que estás festejando. Creamos experiencias pensadas para disfrutar, compartir y convertir cada momento en un recuerdo inolvidable.",
+
+            paso1Titulo: "Cuéntanos tu idea",
+            paso1Texto:
+                "Háblanos de tu celebración, tus invitados y el estilo de fiesta que tienes en mente.",
+
+            paso2Titulo: "Creamos tu propuesta",
+            paso2Texto:
+                "Te ayudamos a encontrar las mejores opciones para que tu celebración tenga todo lo que imaginas.",
+
+            paso3Titulo: "Disfruta la fiesta",
+            paso3Texto:
+                "Nosotros cuidamos cada detalle para que tú y tus invitados solo tengan que disfrutar.",
+
+            accion: "¿Comenzamos a celebrar?",
+            accionTexto:
+                "Cuéntanos qué tienes en mente y hagamos de tu celebración un momento inolvidable."
+        },
+
+        corporativo: {
+            etiqueta: "EVENTOS QUE REPRESENTAN TU EMPRESA",
+            titulo: "Tu evento empieza aquí",
+            frase: "Cuidamos cada detalle para que tu empresa proyecte la imagen que merece.",
+            descripcion:
+                "Un evento corporativo también comunica quién eres. Te ayudamos a crear una experiencia organizada, profesional y memorable, pensada para tus colaboradores, clientes e invitados.",
+
+            paso1Titulo: "Cuéntanos tus objetivos",
+            paso1Texto:
+                "Comparte con nosotros el propósito de tu evento, número de invitados, fecha y necesidades.",
+
+            paso2Titulo: "Diseñamos tu propuesta",
+            paso2Texto:
+                "Creamos una propuesta adaptada a la identidad de tu empresa y a los objetivos de tu evento.",
+
+            paso3Titulo: "Vive un evento profesional",
+            paso3Texto:
+                "Nos encargamos de los detalles para que puedas concentrarte en tus invitados y en los resultados.",
+
+            accion: "¿Planeamos tu próximo evento?",
+            accionTexto:
+                "Cuéntanos qué necesita tu empresa y encontremos juntos la mejor propuesta."
+        }
+    };
+
+    const datos = conversiones[tipo];
+
+    if (!datos) return;
+
+    conversionContainer.innerHTML = `
+
+        <section class="evento-conversion">
+
+            <div class="evento-conversion-contenido">
+
+                <div class="evento-conversion-texto">
+
+                    <span class="evento-etiqueta">
+                        ${datos.etiqueta}
+                    </span>
+
+                    <h2>${datos.titulo}</h2>
+
+                    <p class="evento-frase">
+                        ${datos.frase}
+                    </p>
+
+                    <p class="evento-descripcion">
+                        ${datos.descripcion}
+                    </p>
+
+                </div>
+
+
+                <div class="evento-pasos">
+
+                    <div class="evento-paso">
+                        <span>01</span>
+
+                        <div>
+                            <h3>${datos.paso1Titulo}</h3>
+                            <p>${datos.paso1Texto}</p>
+                        </div>
+                    </div>
+
+
+                    <div class="evento-paso">
+                        <span>02</span>
+
+                        <div>
+                            <h3>${datos.paso2Titulo}</h3>
+                            <p>${datos.paso2Texto}</p>
+                        </div>
+                    </div>
+
+
+                    <div class="evento-paso">
+                        <span>03</span>
+
+                        <div>
+                            <h3>${datos.paso3Titulo}</h3>
+                            <p>${datos.paso3Texto}</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="evento-conversion-accion">
+
+                <h3>${datos.accion}</h3>
+
+                <p>${datos.accionTexto}</p>
+
+                <a href="https://wa.me/573132644554" class="evento-boton">
+                    SOLICITAR COTIZACIÓN
+                </a>
+
+            </div>
+
+        </section>
+    `;
 }

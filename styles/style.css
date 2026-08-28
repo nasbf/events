@@ -534,20 +534,28 @@
     object-position: center 15%;
 }
 
+.text-block h1{
+    font-family: "dancing script";
+    color: var(--papel);
+    font-size: 3.5em;
+    font-weight: 100;
+    text-align: center;
+    
+}
 .text-block {
     position: absolute;
     left: 5%;
     right: 70%;
     bottom: 5%;
-    background-color:rgba(0, 0, 0, 0.609);
-    color: white;
+    background-color:rgba(0, 0, 0, 0.432);
+    color: var(--papel);
     padding: 25px 35px;
 }
 
   .text-block p{
     text-align: center;    
     font-size: 1.4em;   
-    font-family: "montserrat alternates";
+    font-family: "inter";
     font-weight: lighter;
   }
 
@@ -620,6 +628,292 @@
     text-align: center;
     padding: 40px;
   }
+
+  /* =========================================================
+   SECCIÓN DE CONVERSIÓN
+   ========================================================= */
+
+.evento-conversion {
+    width: 100%;
+    padding: 90px 7% 100px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.evento-conversion-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   TEXTO PRINCIPAL
+   ========================================================= */
+
+.evento-conversion-texto {
+    text-align: center;
+}
+
+.evento-etiqueta {
+    display: block;
+    margin-bottom: 15px;
+
+    font-family: "montserrat alternates";
+    font-size: 0.95em;
+    letter-spacing: 3px;
+    font-weight: 500;
+
+    color: var(--oro-suave);
+}
+
+.evento-conversion-texto h2 {
+    margin: 0 0 20px;
+
+    font-family: "dancing script";
+    font-size: 4em;
+    line-height: 1.1;
+    font-weight: 100;
+
+    color: var(--oro-suave);
+}
+
+.evento-frase {
+    margin: 0 auto 25px;
+
+    max-width: 550px;
+
+    font-family: "montserrat alternates";
+    font-size: 1.35em;
+    line-height: 1.5;
+    font-weight: 500;
+
+    color: #1c1e26;
+}
+
+.evento-descripcion {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+
+    font-family: "inter";
+    font-size: 1.3em;
+    line-height: 1.7;
+
+    color: #1c1e26;
+}
+
+
+/* =========================================================
+   PASOS
+   ========================================================= */
+
+.evento-pasos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.evento-paso {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 20px;
+
+    align-items: start;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(var(--oro-suave), 0.35);
+}
+
+.evento-paso:last-child {
+    border-bottom: none;
+}
+
+.evento-paso > span {
+    font-family: "dancing script";
+    font-size: 2.5em;
+    line-height: 1;
+
+    color: var(--oro-suave);
+}
+
+.evento-paso h3 {
+    margin: 0 0 8px;
+
+    font-family: "montserrat alternates";
+    font-size: 1.2em;
+    font-weight: 600;
+
+    color: #1c1e26;
+}
+
+.evento-paso p {
+    margin: 0;
+
+    font-family: "inter";
+    font-size: 1.2em;
+    line-height: 1.6;
+
+    color: #1c1e26;
+}
+
+
+/* =========================================================
+   LLAMADO A LA ACCIÓN
+   ========================================================= */
+
+.evento-conversion-accion {
+    max-width: 850px;
+    margin: 80px auto 0;
+
+    padding-top: 50px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(var(--oro-suave), 0.35);
+}
+
+.evento-conversion-accion h3 {
+    margin: 0 0 15px;
+
+    font-family: "dancing script";
+    font-size: 3em;
+    font-weight: 100;
+
+    color: var(--oro-suave);
+}
+
+.evento-conversion-accion p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+
+    font-family: "inter";
+    font-size: 1.2em;
+    line-height: 1.6;
+
+    color: #1c1e26;
+}
+
+
+/* =========================================================
+   BOTÓN
+   ========================================================= */
+
+.evento-boton {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    background-color: var(--oro-suave);
+    color: white;
+
+    font-family: "montserrat alternates";
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.evento-boton:hover {
+    background-color: var(--paragraph);
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .evento-conversion {
+        padding: 75px 6% 85px;
+    }
+
+    .evento-conversion-contenido {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .evento-conversion-texto {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .evento-conversion {
+        padding: 60px 7% 70px;
+    }
+
+    .evento-conversion-texto h2 {
+        font-size: 3em;
+    }
+
+    .evento-frase {
+        font-size: 1.1em;
+    }
+
+    .evento-descripcion {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .evento-paso {
+        grid-template-columns: 45px 1fr;
+        gap: 15px;
+    }
+
+    .evento-paso > span {
+        font-size: 2em;
+    }
+
+    .evento-paso h3 {
+        font-size: 1.05em;
+    }
+
+    .evento-paso p {
+        font-size: 0.95em;
+    }
+
+    .evento-conversion-accion {
+        margin-top: 60px;
+        padding-top: 40px;
+    }
+
+    .evento-conversion-accion h3 {
+        font-size: 2.5em;
+    }
+
+    .evento-boton {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
 
 
 /* =========================================
