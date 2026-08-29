@@ -1,70 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Gourmet Real</title>
     
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 
-
+    
 </head>
+
 <body>
-    <header>
-        <a class="logo" href="index.html">
-            <img class="logo" src= "images/logo.JPG" alt="Logo Gourmet">
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="states.html">States</a>
-            <a href="decoration.html">Decoration</a>
-            <a href="contactus.html" target="blank">Contact Us</a>
-        </nav>
-    </header>
-        <div id="initial">
-            <div id="one">
-                <img id="first" src="images/CapillaMonteLeon2.jpeg" alt="capilla">
+    <div id="topbar-container"></div>
+    <div id="header-container"></div>
+    
+
+    <div>
+        <div id="container">
+            <img src="images/quinceanera.jpeg" alt="Quinceañera">
+            <div class="text-block">
+            <h1>
+            El lugar donde tus sueños toman forma.
+            </h1>
+            <p>
+            Somos un equipo que sincroniza cada detalle de tu boda para crear una experiencia única, especial y memorable.<br>
+            Encuentra con nosotros el escenario perfecto para comenzar esta nueva historia.
+            </p>
+            
             </div>
         </div>
 
-    <main class="deco-grid">
-            <h2>Decoration identify you!! All details are important.</h2>
-            <div class="campestre">
-                <img src="images/decoracion-exterior.jpg" alt="camp">
-                
-            </div>
-        
-            <div class="rustica">
-                <img src="images/decoracion-rustica.jpg" alt="table dec">
-                
-            </div>
+    </div>
+    <br>
+    <br>
+    <main class="wedding-grid">
+        <div class="firstDetail">
+            <img class="card-image" src="images/decoQuinceanos.jpeg" alt="Decoración Interior">
+        </div>
+        <div class="sectionOne" >
+            <h2>Cada Detalle Cuenta</h2>
             
-            <div class="text1">      
-                <P>
-                Decoration is important to achieve a unique wedding adapted to the couple. We take care of every 
-                detail to create a calm, organized and detailed atmosphere, setting the place with natural flowers 
-                of the bride and groom's choice, tablecloths, napkins and plates base, according to the couple's profile.
-                </P>
-            </div>
-            <div class="dorado">
-                <img class="dec-imgen" src="images/decoración.jpeg" alt="table dec">
-            </div>
-            <div class="cake">
-                <img class="dec-imagen" src="images/ponque-bodas.jpeg" alt="cake">
-            </div>
-            <div class="text2"> 
-                <p>
-                We are specialized in both religious and civil weddings, we make the bride and groom, after our contact, 
-                not worry about the decoration and have their minds on something else. Our services range from the bridal 
-                bouquet, to the church and from the church to the farm.
-            </p>
-            </div>
+            
+            <p>Una boda inolvidable comienza mucho antes de la celebración. Nos encargamos de coordinar cada detalle para que tú puedas 
+                disfrutar de uno de los días más importantes de tu vida. Desde la elección del lugar hasta la ambientación, el servicio y 
+                cada momento de la celebración, nuestro equipo trabaja para que todo fluya de manera armoniosa.</p>
+        </div>
+        
+        <div class="secondDetail">
+            <img class="card-image" src="images/cumpleanos.jpeg" alt="Cumpleaños">
+        </div>
+        <div class="reman">
+            <h2>El escenario de tu historia</h2>
+            
+            
+            <p>El lugar que eliges será parte de tus recuerdos para siempre. Por eso contamos con espacios cuidadosamente seleccionados para 
+                crear diferentes ambientes y estilos de boda. Jardines, naturaleza, elegancia y espacios pensados para recibir a tus invitados
+                 y hacer de cada momento una experiencia especial.</P>
+        </div>
+        
+        <!-- <div class="ThirdDetail">
+            <img class="card-image" src="images/noviosBeso.jpeg" alt="nogales">
+        </div>
+        <div class="sectionThird">
+            <h2>Tu boda, tal como la imaginaste</h2>
+            
+            
+            <P>
+                Queremos que tu celebración tenga tu esencia. Escuchamos tus ideas, conocemos tus preferencias y trabajamos contigo para crear
+                 una boda que refleje quiénes son como pareja. Nuestro propósito es que cada detalle tenga sentido y que, al final del día,
+                  solo tengas que preocuparte por disfrutar, celebrar y crear recuerdos junto a las personas que amas.
+            </P>
+        </div> -->
         
     </main>
-    
-
     <div id="conversion-container"></div>
+
+    <div id="galeria-container"></div>
+
+    <div id="cotizacion-container"></div>
+
+    <div id="footer"></div>
+
+    <div id="whatsapp-container"></div>
+
     <script src="scripts/components.js"></script>
     <script>
     cargarConversion("cumpleanos");
