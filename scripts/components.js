@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cargarTopbar();
     cargarHeader();
+    cargarGaleria();
     cargarCotizacion();
     cargarFooter();
     cargarWhatsapp();
@@ -492,4 +493,40 @@ function cargarConversion(tipo) {
 
         </section>
     `;
+}
+
+/* =========================================
+   GALERÍA
+   ========================================= */
+
+function cargarGaleria() {
+
+    const container =
+        document.getElementById("galeria-container");
+
+    if (!container) {
+        return;
+    }
+
+    fetch("components/galeria.html")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("No se pudo cargar la galería.");
+            }
+
+            return response.text();
+
+        })
+        .then(html => {
+
+            container.innerHTML = html;
+
+        })
+        .catch(error => {
+
+            console.error("Error cargando galería:", error);
+
+        });
+
 }

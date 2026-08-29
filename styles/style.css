@@ -929,7 +929,7 @@
     .text-block {
         left: 5%;
         right: 5%;
-        bottom: 5%;
+        bottom: 1%;
         padding: 18px 20px;
     }
     .wedding-grid {
@@ -1742,4 +1742,137 @@ font-size:13.5px;
         height: 27px;
     }
 
+}
+
+/* =========================================
+   GALERÍA
+   ========================================= */
+
+.galeria {
+    width: 100%;
+    max-width: 1400px;
+    margin: 100px auto 0;
+    padding: 60px 50px;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.galeria-encabezado {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.galeria-eyebrow {
+    margin: 0 0 10px;
+
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    color: var(--oro);
+}
+
+.galeria-encabezado h2 {
+    margin: 0 0 15px;
+
+    font-family: "Dancing Script", cursive;
+    font-size: 4em;
+    font-weight: 400;
+
+    color: var(--oro-suave);
+}
+
+.galeria-encabezado > p:last-child {
+    margin: 0 auto;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+
+    color: var(--paragraph);
+}
+
+
+/* =========================================
+   GRID 3 × 2
+   ========================================= */
+
+.galeria-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   IMÁGENES
+   ========================================= */
+
+.galeria-item {
+    overflow: hidden;
+    background: var(--papel);
+}
+
+.galeria-item img {
+    display: block;
+
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+/* =========================================
+   EFECTO HOVER
+   ========================================= */
+
+.galeria-item:hover img {
+    transform: scale(1.04);
+}
+
+/* =========================================
+   GALERÍA - CELULAR
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .galeria {
+        margin-top: 60px;
+        padding: 45px 20px;
+    }
+
+    .galeria-encabezado {
+        margin-bottom: 35px;
+    }
+
+    .galeria-encabezado h2 {
+        font-size: 3em;
+    }
+
+    .galeria-encabezado > p:last-child {
+        font-size: 1.15rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .galeria-item img {
+        height: 280px;
+    }
 }
