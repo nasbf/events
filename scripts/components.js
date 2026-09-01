@@ -499,7 +499,7 @@ function cargarConversion(tipo) {
    GALERÍA
    ========================================= */
 
-function cargarGaleria() {
+function cargarGaleria(tipo) {
 
     const container =
         document.getElementById("galeria-container");
@@ -508,11 +508,93 @@ function cargarGaleria() {
         return;
     }
 
+
+    const galerias = {
+
+        bodas: {
+
+            imagenes: [
+                "images/hye_boda.jpg",
+                "images/CapillaMonteLeon2.jpeg",
+                "images/decoracion.jpeg",
+                "images/MACIA3.jpeg",
+                "images/mesaDecoradaBoda.webp",
+                "images/boda6.webp"
+            ],
+
+            alt: [
+                "Boda Gourmet Real",
+                "Decoración de boda",
+                "Celebración de boda",
+                "Montaje de boda",
+                "Mesa decorada para boda",
+                "Momento especial de boda"
+            ]
+
+        },
+
+
+        cumpleanos: {
+
+            imagenes: [
+                "images/quinceAnos.jpeg",
+                "images/quinceanero.jpeg",
+                "images/quinceanera2.jpeg",
+                "images/decoExteriorQuinceanos.jpeg",
+                "images/quinceAños.jpg",
+                "images/minitk.jpg"
+            ],
+
+            alt: [
+                "Decoración de cumpleaños",
+                "Decoración de quinceañero",
+                "Quinceañera",
+                "Decoración exterior para quince años",
+                "Decoración interior para cumpleaños",
+                "Mini-Tk para cumpleaños"
+            ]
+
+        },
+
+
+        corporativo: {
+
+            imagenes: [
+                "images/corporativo1.webp",
+                "images/corporativo2.webp",
+                "images/corporativo3.webp",
+                "images/corporativo4.webp",
+                "images/corporativo5.webp",
+                "images/corporativo6.webp"
+            ],
+
+            alt: [
+                "Evento corporativo",
+                "Celebración empresarial",
+                "Evento empresarial",
+                "Montaje corporativo",
+                "Evento Gourmet Real",
+                "Evento corporativo Gourmet Real"
+            ]
+
+        }
+
+    };
+
+
+    const datos = galerias[tipo];
+
+    if (!datos) {
+        return;
+    }
+
+
     fetch("components/galeria.html")
         .then(response => {
 
             if (!response.ok) {
                 throw new Error("No se pudo cargar la galería.");
+
             }
 
             return response.text();
@@ -521,6 +603,23 @@ function cargarGaleria() {
         .then(html => {
 
             container.innerHTML = html;
+
+
+            datos.imagenes.forEach((imagen, index) => {
+
+                const elemento =
+                    container.querySelector(
+                        `.galeria-imagen-${index + 1}`
+                    );
+
+                if (elemento) {
+
+                    elemento.src = imagen;
+                    elemento.alt = datos.alt[index];
+
+                }
+
+            });
 
         })
         .catch(error => {
