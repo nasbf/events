@@ -519,7 +519,7 @@ function cargarGaleria(tipo) {
                 "images/decoracion.jpeg",
                 "images/MACIA3.jpeg",
                 "images/mesaDecoradaBoda.webp",
-                "images/boda6.webp"
+                "images/rumbaBoda.jpg"
             ],
 
             alt: [
@@ -542,7 +542,7 @@ function cargarGaleria(tipo) {
                 "images/quinceanera2.jpeg",
                 "images/decoExteriorQuinceanos.jpeg",
                 "images/quinceAños.jpg",
-                "images/lucesMiniTk.jpg"
+                "images/lucesMinitk.jpg"
             ],
 
             alt: [
@@ -560,19 +560,19 @@ function cargarGaleria(tipo) {
         corporativo: {
 
             imagenes: [
-                "images/corporativo1.webp",
-                "images/corporativo2.webp",
-                "images/corporativo3.webp",
-                "images/corporativo4.webp",
-                "images/corporativo5.webp",
-                "images/corporativo6.webp"
+                "images/auditorio.jpg",
+                "images/agendasCorporativo.webp",
+                "images/eventoOscars.webp",
+                "images/escarapelas.jpg",
+                "images/brunch.jpg",
+                "images/mesaCorporativo.jpg"
             ],
 
             alt: [
-                "Evento corporativo",
-                "Celebración empresarial",
+                "auditorio corporativo",
+                "Agendas corporativas",
                 "Evento empresarial",
-                "Montaje corporativo",
+                "Escarapelas corporativo",
                 "Evento Gourmet Real",
                 "Evento corporativo Gourmet Real"
             ]
