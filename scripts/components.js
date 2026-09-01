@@ -542,7 +542,7 @@ function cargarGaleria(tipo) {
                 "images/quinceanera2.jpeg",
                 "images/decoExteriorQuinceanos.jpeg",
                 "images/quinceAños.jpg",
-                "images/minitk.jpg"
+                "images/lucesMiniTk.jpg"
             ],
 
             alt: [
