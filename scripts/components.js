@@ -519,7 +519,7 @@ function cargarGaleria(tipo) {
                 "images/decoracion.jpeg",
                 "images/MACIA3.jpeg",
                 "images/mesaDecoradaBoda.webp",
-                "images/rumbaBoda.jpg"
+                "images/rumbaBoda.JPG"
             ],
 
             alt: [
