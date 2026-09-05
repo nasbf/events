@@ -28,7 +28,8 @@
 
 .parallax,
 .parallax2,
-.parallax3 {
+.parallax3,
+.parallax4 {
     min-height: 680px;
 
     background-attachment: fixed;
@@ -49,6 +50,10 @@
     background-image: url("MESA.jpg");
 }
 
+.parallax4 {
+    background-image: url("../images/equipoGourmet3.jpg");
+}
+
 
 /* =========================================
    PARALLAX EN CELULAR
@@ -58,7 +63,8 @@
 
     .parallax,
     .parallax2,
-    .parallax3 {
+    .parallax3,
+    .parallax4 {
         min-height: 350px;
 
         /*
